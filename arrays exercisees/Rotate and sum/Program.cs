@@ -27,7 +27,7 @@ namespace Rotate_and_sum
                
             }
             //for (int i = 0; i < rotationTimes; i++)
-            //{
+             //{
             //    for (int j = 1; j <= numbs.Length; j++)
             //    {
             //        result[i] = numbs[]
