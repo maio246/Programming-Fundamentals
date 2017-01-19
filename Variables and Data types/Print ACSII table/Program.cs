@@ -15,7 +15,7 @@ namespace Print_ACSII_table
 
             for (int i = firstNumb; i <= secondNumb; i++)
             {
-                Console.WriteLine($"{(char)i}");
+                Console.Write($"{(char)i}");
             }
         }
     }
