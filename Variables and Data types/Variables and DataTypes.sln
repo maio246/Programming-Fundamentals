@@ -31,6 +31,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "integer to Hex and Binary",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastPrimeCheckerPopravka", "FastPrimeCheckerPopravka\FastPrimeCheckerPopravka.csproj", "{0D8FB1DD-0C35-4294-8624-7876A21B8C54}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diff Int Sizes", "Diff Int Sizes\Diff Int Sizes.csproj", "{DECDC998-1750-4182-A064-6E92768D3611}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparing floats", "Comparing floats\Comparing floats.csproj", "{9B146197-6CD1-450A-B0F6-2B11DD965B84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Print ACSII table", "Print ACSII table\Print ACSII table.csproj", "{AA16947E-1B1A-4AED-82C2-F7270ACD7101}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +99,18 @@ Global
 		{0D8FB1DD-0C35-4294-8624-7876A21B8C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D8FB1DD-0C35-4294-8624-7876A21B8C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D8FB1DD-0C35-4294-8624-7876A21B8C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DECDC998-1750-4182-A064-6E92768D3611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DECDC998-1750-4182-A064-6E92768D3611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DECDC998-1750-4182-A064-6E92768D3611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DECDC998-1750-4182-A064-6E92768D3611}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B146197-6CD1-450A-B0F6-2B11DD965B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B146197-6CD1-450A-B0F6-2B11DD965B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B146197-6CD1-450A-B0F6-2B11DD965B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B146197-6CD1-450A-B0F6-2B11DD965B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA16947E-1B1A-4AED-82C2-F7270ACD7101}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA16947E-1B1A-4AED-82C2-F7270ACD7101}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA16947E-1B1A-4AED-82C2-F7270ACD7101}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA16947E-1B1A-4AED-82C2-F7270ACD7101}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
