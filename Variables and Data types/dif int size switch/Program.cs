@@ -10,6 +10,8 @@ namespace dif_int_size_switch
     {
         static void Main(string[] args)
         {
+            string number = Console.ReadLine();
+
         }
     }
 }

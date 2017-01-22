@@ -11,16 +11,16 @@ namespace stringsAndObjs
         public static void Main(string[] args)
         {
             sum();
-            string result = sum();
+            object result = sum();
             Console.WriteLine(result);
         }
 
-        private static string sum()
+        private static object sum()
         {
-            string hello = "Hello";
-            string world = "World";
+            object hello = "Hello";
+            object world = "World";
 
-            string sum = $"{hello} {world}";
+            object sum = $"{hello} {world}";
             return sum;
         }
     }

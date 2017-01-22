@@ -11,27 +11,35 @@ namespace Fold_and_Sum
         static void Main(string[] args)
         {
             int[] arrayNumbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
-
-            int[] firstRow = new int[arrayNumbers.Length / 2];
-            int[] secondRow = new int[arrayNumbers.Length / 2];
-
-            for (int i = 0; i < firstRow.Length / 2; i++)
+            int k = arrayNumbers.Length / 4;
+            int[] firstRow = new int[k * 2];
+            int[] secondRow = new int[k * 2];
+            int counter = 0;
+            int secondCounter = 0;
+            for (int i = k - 1; i >= 0; i--)
             {
-                firstRow[i] = arrayNumbers[i];
-                firstRow[firstRow.Length / 2] = arrayNumbers[(arrayNumbers.Length - 1) - i];
+                firstRow[counter] = arrayNumbers[i];
+                counter++;
             }
-            //for (int i = 1; i < arrayLength; i++)
-            //{
-            //    secondRow[arrayLength - i] = arrayNumbers[arrayNumbers.Length - i];
-            //    secondRow[i] = arrayNumbers[(arrayLength - 1) - i];
-            //}
+            for (int i = arrayNumbers.Length - 1; i >= (k - 1) * 3 / 4; i--)
+            {
+                firstRow[counter] = arrayNumbers[counter];
+                counter++;
+            }
+            for (int i = k - 1; i <= (arrayNumbers.Length - 1) * 3 / 4; i++)
+            {
+                secondRow[secondCounter] = arrayNumbers[k];
+                secondCounter++;
+            }
+
+            // for i = length / 4 -> 0
+            // for i = length - 1 -> length * 3/ 4
+
+
+
             foreach (int number in firstRow)
             {
                 Console.Write(number);
-            }
-            foreach (int number in secondRow)
-            {
-                Console.WriteLine(number);
             }
         }
     }
