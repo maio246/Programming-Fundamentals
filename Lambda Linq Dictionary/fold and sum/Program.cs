@@ -14,9 +14,6 @@ namespace fold_and_sum
 
             int k = numbers.Length / 4;
 
-            //int[] firstRow = new int[k * 2];
-            //int[] secondRow = new int[k * 2];
-
             int[] firstRowLeft = numbers.Take(k).Reverse().ToArray();
             int[] firstRowRight = numbers.Reverse().Take(k).ToArray();
             int[] secondRow = numbers.Skip(k).Take(2 * k).ToArray();

@@ -31,12 +31,6 @@ namespace Fold_and_Sum
                 secondRow[secondCounter] = arrayNumbers[k];
                 secondCounter++;
             }
-
-            // for i = length / 4 -> 0
-            // for i = length - 1 -> length * 3/ 4
-
-
-
             foreach (int number in firstRow)
             {
                 Console.Write(number);

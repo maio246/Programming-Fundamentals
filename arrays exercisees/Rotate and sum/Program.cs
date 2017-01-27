@@ -12,27 +12,23 @@ namespace Rotate_and_sum
         {
             int[] numbs = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int rotationTimes = int.Parse(Console.ReadLine());
-            int[] tempRotation = new int[numbs.Length];
-            int[] previousRotation = new int[numbs.Length];
+
             int[] result = new int[numbs.Length];
 
-
-            for (int i = 1; i <= rotationTimes; i++)
+            for (int i = 0; i < rotationTimes % numbs.Length; i++)
             {
-                for (int j = 0; j <= numbs.Length - 1; j++)
-                {
-                    tempRotation[j] = numbs[numbs.Length - i];
-                    result[j] += tempRotation[j]; 
+                int lastElement = numbs[0];
+                for (int i = 1; i < numbs.Length; i++)
+                }                {
+                    numbs[j] = numbs[j - 1];
                 }
-               
+                numbs[0] = lastElement;
+                for (int j = 0; j < numbs.Length; j++)
+                {
+                    result[i] += numbs[i];
+                }
             }
-            //for (int i = 0; i < rotationTimes; i++)
-             //{
-            //    for (int j = 1; j <= numbs.Length; j++)
-            //    {
-            //        result[i] = numbs[]
-            //    }
-            //}
+
             foreach (int number in result)
             {
                 Console.Write(number + " ");
