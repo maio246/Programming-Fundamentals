@@ -15,25 +15,28 @@ namespace Rotate_and_sum
 
             int[] result = new int[numbs.Length];
 
-            for (int i = 0; i < rotationTimes % numbs.Length; i++)
+            RotateAndSum(numbs, rotationTimes, result);
+            Console.WriteLine(string.Join(" ", result));
+        }
+
+        private static void RotateAndSum(int[] numbs, int rotationTimes, int[] result)
+        {
+            for (int i = 0; i < rotationTimes; i++)
             {
-                int lastElement = numbs[0];
-                for (int i = 1; i < numbs.Length; i++)
-                }                {
+                int lastDigit = numbs[numbs.Length - 1];
+
+                for (int j = numbs.Length - 1; j > 0; j--)
+                {
                     numbs[j] = numbs[j - 1];
                 }
-                numbs[0] = lastElement;
+
+                numbs[0] = lastDigit;
+
                 for (int j = 0; j < numbs.Length; j++)
                 {
-                    result[i] += numbs[i];
+                    result[j] += numbs[j];
                 }
             }
-
-            foreach (int number in result)
-            {
-                Console.Write(number + " ");
-            }
-            Console.WriteLine();
         }
     }
 }

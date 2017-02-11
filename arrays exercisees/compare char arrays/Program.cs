@@ -15,6 +15,11 @@ namespace compare_char_arrays
 
             int smallerArray = Math.Min(firstArray.Length, secondArray.Length);
 
+            BiggerCharRow(firstArray, secondArray, smallerArray);
+        }
+
+        private static void BiggerCharRow(char[] firstArray, char[] secondArray, int smallerArray)
+        {
             if (firstArray.Length < secondArray.Length)
             {
                 Console.WriteLine(string.Join("", firstArray));

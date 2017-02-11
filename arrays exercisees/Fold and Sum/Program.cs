@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Fold_and_Sum
 {
     class Program
-    {
+    { 
         static void Main(string[] args)
         {
             int[] arrayNumbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
@@ -21,12 +21,13 @@ namespace Fold_and_Sum
                 firstRow[counter] = arrayNumbers[i];
                 counter++;
             }
-            for (int i = arrayNumbers.Length - 1; i >= (k - 1) * 3 / 4; i--)
+            counter--;
+            for (int i = arrayNumbers.Length - 1; i > (k * 3) - 1; i--)
             {
-                firstRow[counter] = arrayNumbers[counter];
+                firstRow[counter] = arrayNumbers[i]; // exception index out of bounds of the array!
                 counter++;
             }
-            for (int i = k - 1; i <= (arrayNumbers.Length - 1) * 3 / 4; i++)
+            for (int i = k - 1; i <= (arrayNumbers.Length - 1) * (3 / 4); i++)
             {
                 secondRow[secondCounter] = arrayNumbers[k];
                 secondCounter++;

@@ -10,34 +10,49 @@ namespace Phonebook
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> phonebook = new Dictionary<string, string>();
+            SortedDictionary<string, string> phonebook = new SortedDictionary<string, string>();
 
-            List<string> input = new List<string>();
+            List<string> input = Console.ReadLine().Split().ToList();
+
             List<string> result = new List<string>();
 
-            do
-            {
-                input = Console.ReadLine().Split().ToList();
-                if (input[0] == "A")
-                {
-                    phonebook.Add(input[1], input[2]);
-                }
-                else if (input[0] == "S")
-                {
+            bool hasListAll = false;
 
-                    if (phonebook.ContainsKey(input[1]))
-                    {
-                        result.Add($"{input[1]} -> {phonebook[input[1]]}");
-                    }
-                    else
-                    {
-                        result.Add($"Contact {input[1]} does not exist.");
-                    }
-                }
-            } while (input[0] != "END");
-            foreach (var contact in result)
+            while (input[0] != "END")
             {
-                Console.WriteLine(contact);
+
+                if (input[0] == "END") break;
+                else if (input[0] == "A")
+                    if (!phonebook.ContainsKey(input[1])) phonebook.Add(input[1], input[2]);
+                    else phonebook[input[1]] = input[2];
+                else if (input[0] == "S")
+                    if (phonebook.ContainsKey(input[1]))
+                        result.Add($"{input[1]} -> {phonebook[input[1]]}");
+                    else result.Add($"Contact {input[1]} does not exist.");
+                else if (input[0] == "ListAll") hasListAll = true;
+
+                input = Console.ReadLine().Split().ToList();
+            };
+
+            if (hasListAll == true && phonebook.Count > 0)
+            {
+                foreach (var contact in phonebook)
+                {
+                    Console.WriteLine($"{contact.Key} -> {contact.Value}");
+                }
+
+            }
+            else if (hasListAll == true && phonebook.Count == 0)
+            {
+                Console.WriteLine("Empty");
+            }
+            else
+            {
+                foreach (var contact in result)
+                {
+                    Console.WriteLine(contact);
+                }
+
             }
         }
     }

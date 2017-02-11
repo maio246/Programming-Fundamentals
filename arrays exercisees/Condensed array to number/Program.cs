@@ -12,6 +12,13 @@ namespace Condensed_array_to_number
         {
             int[] nums = Console.ReadLine().Split().Select(int.Parse).ToArray();
             int arrayLength = nums.Length - 1;
+            nums = CondensedNumbs(nums, arrayLength);
+            Console.WriteLine(nums[0]);
+
+        }
+
+        private static int[] CondensedNumbs(int[] nums, int arrayLength)
+        {
             for (int i = 0; i < arrayLength; i++)
             {
                 int[] condensed = new int[nums.Length - 1];
@@ -23,8 +30,8 @@ namespace Condensed_array_to_number
                 nums = condensed;
 
             }
-            Console.WriteLine(nums[0]);
 
+            return nums;
         }
     }
 }

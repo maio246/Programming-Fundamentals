@@ -11,29 +11,32 @@ namespace max_seq_elements
         static void Main(string[] args)
         {
             int[] input = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            var start = 0;
-            var length = 1;
+            int currentCount = 1;
 
-            var seqStart = 0;
-            var seqLength = 0;
+            int bestStart = 0;
+            int bestLength = 0;
 
-            for (int i = 1; i <= input.Length - 1; i++)
+            for (int i = 1; i < input.Length; i++)
             {
-
                 if (input[i] == input[i - 1])
                 {
-                    length++;
-                }
-                else if (input[i] != input[i + 1])
-                {
-                    start = i;
-                    if (length > seqLength)
+                    currentCount++;
+                    if (currentCount > bestLength)
                     {
-                        seqStart = i;
-                        length = 1;
+                        bestStart = i - currentCount;
+                        bestLength = currentCount;
                     }
                 }
+                else if (input[i] != input[i - 1])
+                {
+                    currentCount = 1;
+                }
             }
+            for (int i = bestStart + 1; i < bestLength + bestStart + 1; i++)
+            {
+                Console.Write($"{input[i]} ");
+            }
+            Console.WriteLine();
         }
     }
 }

@@ -11,23 +11,29 @@ namespace Odd_occurencies
         static void Main(string[] args)
         {
             string[] inputString = Console.ReadLine().ToLower().Split();
-            Dictionary<string, int> result = new Dictionary<string, int>();
-            var res = "";
+
+            Dictionary<string, int> words = new Dictionary<string, int>();
+            List<string> result = new List<string>();
+
             foreach (string word in inputString)
             {
-                if (result.ContainsKey(word))
+                if (words.ContainsKey(word))
                 {
-                    result[word]++;
+                    words[word]++;
                 }
                 else
                 {
-                    result[word] = 1;
+                    words[word] = 1;
                 }
             }
-            foreach (var word in result)
+            foreach (var word in words)
             {
-                 res = result.Count(n => n % 2 == 1);
+                if (word.Value % 2 == 1)
+                {
+                    result.Add(word.Key);
+                }
             }
+            Console.WriteLine(string.Join(", ", result));
         }
     }
 }

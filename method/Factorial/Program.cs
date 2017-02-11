@@ -18,11 +18,11 @@ namespace Factorial
                 factorial = factorial * i;
             }
             int timesZero = 0;
-            for (int power5 = 5; power5 <= input; power5 *= 5)
+            for (int power5 = 5; power5 <= input; power5 *= 5) // trailing zeros
             {
                 timesZero += input / power5;
             }
-            Console.WriteLine(timesZero);
+            Console.WriteLine(factorial);
 
         }
     }

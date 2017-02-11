@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rounding_Methods
+namespace Rounding_Away_From_Zero
+
 {
     class Program
     {
@@ -14,11 +15,17 @@ namespace Rounding_Methods
                          .Split(' ')
                          .Select(double.Parse)
                          .ToArray();
+
+            RoundAwayFromZeroAndPrint(array);
+
+        }
+
+        private static void RoundAwayFromZeroAndPrint(double[] array)
+        {
             for (int i = 0; i < array.Length; i++)
             {
-                Console.WriteLine("{0} => {1}", array[i], Math.Round(array[i], 0, MidpointRounding.AwayFromZero));
+                Console.WriteLine($"{array[i]} => {Math.Round(array[i], 0, MidpointRounding.AwayFromZero)}");
             }
-
         }
     }
 }

@@ -13,6 +13,13 @@ namespace extract_middle_numbs
             int[] numbers = Console.ReadLine().Split().Select(int.Parse).ToArray();
             List<int> result = GetMiddleNumbers(numbers);
             Console.Write("{ ");
+            PrintResult(result);
+            Console.WriteLine(" }");
+
+        }
+
+        private static void PrintResult(List<int> result)
+        {
             for (int i = 1; i <= result.Count; i++)
             {
                 Console.Write(result[i - 1]);
@@ -21,8 +28,6 @@ namespace extract_middle_numbs
                     Console.Write(", ");
                 }
             }
-            Console.WriteLine(" }");
-
         }
 
         static List<int> GetMiddleNumbers(int[] numbers)
