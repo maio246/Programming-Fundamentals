@@ -1,0 +1,6 @@
+E:\GitHub projects\Programming-Fundamentals\Objects and classes\closest two points\bin\Debug\closest two points.exe.config
+E:\GitHub projects\Programming-Fundamentals\Objects and classes\closest two points\bin\Debug\closest two points.exe
+E:\GitHub projects\Programming-Fundamentals\Objects and classes\closest two points\bin\Debug\closest two points.pdb
+E:\GitHub projects\Programming-Fundamentals\Objects and classes\closest two points\obj\Debug\closest two points.csprojResolveAssemblyReference.cache
+E:\GitHub projects\Programming-Fundamentals\Objects and classes\closest two points\obj\Debug\closest two points.exe
+E:\GitHub projects\Programming-Fundamentals\Objects and classes\closest two points\obj\Debug\closest two points.pdb
